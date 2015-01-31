@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Approaching good enough in Excel</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/base.css">
+        <link rel="stylesheet" href="/assets/syntax.css">
+
+        <!-- Custom CSS -->
+        <!-- <link rel="stylesheet" href="/assets/main.css"> -->
+
+        <script src="/assets/d3.v3.min.js" charset="utf-8"></script>
+        <script src="/assets/topojson.v1.min.js" charset="utf-8"></script>
+        <script src="/assets/queue.v1.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="main">
+
+            <header>
+  <a href="/">NYU — Spring 2015</a> / <span>Week 1</span>
+</header>
+
+<h1>Approaching good enough in Excel</h1>
+
+<div class="lesson">
+  <p>The big 4 – sorting, filtering, aggregating and merging – are enough to help you answer 99 percent of data questions. And almost all the time, Excel will be all you need. Today, we use Excel in two real news situations, including formatting is as it actually comes in the real world.</p>
+
+<h2>Housekeeping</h2>
+
+<ul>
+<li>General thoughts on project pitches: think small + manageable</li>
+<li>Project requirements and <a href="../../projects/">pitches</a>, which are due <strong>Monday</strong>.</li>
+<li><a href="https://github.com/kpq/nyu-data-journalism-fall-2014/wiki/Critique-schedule">Critique time</a></li>
+</ul>
+
+<h2>Basic skills when your data is bigger</h2>
+
+<p>A digression: sometimes data is published to the web, but, without context, it&rsquo;s hard to know whether it&rsquo;s interesting or not. Here&rsquo;s <a href = "http://schools.nyc.gov/AboutUs/schools/data/Attendance.htm">an example</a> about 
+<a href = "http://www.wnyc.org/story/fewer-faces-nyc-schools-after-storm/">NYC school attendance from WNYC.</a></p>
+
+<p>It&rsquo;s easy to pull down this data every day, but, pretty quickly, it&rsquo;s going to get big enough that you will regret any cheating / manual labor you might have done in our earlier exercises last week.</p>
+
+<h2>Excel work doesn&rsquo;t have to look like it</h2>
+
+<p><img src="http://graphics8.nytimes.com/packages/images/multimedia/bundles/projects/2013/BostonMoment/moment1600.jpg"></p>
+
+<p>Your job is to identify as many people as you can in the picture above.</p>
+
+<ol>
+<li><p>The easiest people to identify in the picture should be the runners. From  the online <a href="http://boston-iframe.r.mikatiming.de/2013/?event=R&idp=999999117A7326000008693E&pid=start">results</a>, here&rsquo;s <a href="close-finishers.xls">a spreadsheet</a>.</p></li>
+<li><p>Here&rsquo;s a wrinkle: not everyone in the photo started at the same time. Here&rsquo;s what the race organizers have to say about that: &ldquo;Red bibs (numbers 101 - 8,999) are assigned to Wave 1 (10:00 a.m.). White bibs (numbers 9,000 to 17,999) are assigned to Wave 2 (10:20 a.m.). Blue bibs (numbers 18,000 +) are assigned to Wave 3 (10:40 a.m.).&rdquo;</p></li>
+<li><p>Subtract 40 minutes from the finish gun off of everyone with a bib number less than 9000, and 20 minutes from everyone with a bib number from 9000 to 17999.</p></li>
+<li><p>Make a list of runners to call. Put their first and last names into separate columns with some combination of &ldquo;Data -&gt; Text to columns&rdquo; and find and replace.</p></li>
+<li><p>Here&rsquo;s the <a href="http://www.nytimes.com/interactive/2013/04/22/sports/boston-moment.html">NYT take.</a></p></li>
+</ol>
+
+<h2>Data in the real world</h2>
+
+<p>Unfortunately, data doesn&rsquo;t always come formatted the way we like. Let&rsquo;s take a recent example from last year with some data about successful gun traces out of Chicago. (A <a href="http://www.atf.gov/publications/factsheets/factsheet-national-tracing-center.html">gun trace</a> is where they find out where a gun found in a crime was purchased.) After some phone calls, you get your hands on some source data. Go ahead and <a href="county-data.txt">download it</a> and open it in a spreadsheet.</p>
+
+<ol>
+<li><p>Take a look at the data. What does one row look like? What does our dream data set look like? Do the things we always do: know dimensions, make a copy, give the columns names.</p></li>
+<li><p>Let&rsquo;s think of questions we might ask of our dream data set instead of this data set. What are some headlines we wish we could be able to write? Add a couple of your own in <a href="https://docs.google.com/document/d/19bZ5tU5acdgRGX45qU_MPYHaCMNaP1cQap094SkXs6o/edit?usp=sharing">this Google Doc</a>. This is a &lsquo;hat-on&rsquo; exercise, so don&rsquo;t be shy.</p></li>
+<li><p>Name the sheet <code>traces</code>. How sad does this data make us? </p></li>
+<li><p>Make columns called <code>county_clean</code> and <code>state_clean</code> that has just have counties and states only. </p></li>
+<li><p>How useful would a pivot table of county<em>clean be? Do a filter in `clean</em>county` for &ldquo;Washington&rdquo;. </p></li>
+<li><p>It&rsquo;s pretty clear that we need some data that has unique values for each county. Google &ldquo;US county fips codes&rdquo; and see what the Census has to offer (though any of them are probably fine, we should stick to government data). Save the file locally and enter it as a second sheet in your main Excel file. Call the sheet <code>FIPS</code>. <a class="hidden" href="https://www.census.gov/geo/reference/codes/files/national_county.txt">BLAMO</a> and clean it up, doing the normal things we do.</p></li>
+<li><p>Be happy if your sheet looks like this:
+<img src="Screenshot 2014-03-02 16.42.54.png"></p></li>
+<li><p>Make a new column for the 5-digit county FIPS code for each county. Call it <code>5_digit_fips</code>. There are lots of ways to do this.</p></li>
+<li><p>How are we going to join our data?</p></li>
+<li><p>Remove the word &ldquo;county&rdquo; from <code>county_name</code> in a new field called <code>county2</code>.</p></li>
+<li><p><em>In both sheets</em>, make a new column called <code>joinfield</code> that pastes the county name and state together, separated by a hyphen. You might need to do this in steps.</p></li>
+<li><p>We&rsquo;re ready to make a crude attempt a vlookup. Try to get a column called &ldquo;county_fips&rdquo; in your traces sheet.</p></li>
+<li><p>Which ones didn&rsquo;t match? Why?</p></li>
+<li><p>Make a new field called is_error that gives you a 1 if there is an error and a zero if there is not.</p></li>
+<li><p>Sort your traces data by is_error and then count, both decreasing. This will let you prioritize your targets and quantitatively answer how good our merge was. How many do we need to fix? </p></li>
+<li><p>Seek and destroy! There&rsquo;s no wrong way to do this, but some ways are righter than others. Keep going until you have matched <em>98 percent of guns and are not missing any counties with more than 30 guns traced</em>. (Protip: a pivot table of <code>is_error</code> and sum of <code>count</code> will be helpful.)</p></li>
+<li><p>With the FIPS codes, what can we do that we couldn&rsquo;t before?</p></li>
+<li><p>Can we answer this question the way we did this join? &ldquo;What percent of counties had at least one gun traced to Chicago?&rdquo;</p></li>
+<li><p>One stats program called R would let us map these without too much trouble. What questions might these maps lead you to ask? Where might you go to get answers?
+<img src="http://kpq.github.io/r-tutorials/assets/images/chicago-map-10.png">
+<img src="http://kpq.github.io/r-tutorials/assets/images/chicago-map-12.png"></p></li>
+<li><p>Here&rsquo;s the <a href="http://www.nytimes.com/interactive/2013/01/29/us/where-50000-guns-in-chicago-came-from.html?ref=us">NYT take</a> and <a href="http://www.nytimes.com/2013/01/30/us/strict-chicago-gun-laws-cant-stem-fatal-shots.html?pagewanted=all">story</a>.</p></li>
+</ol>
+
+<h2>If there&rsquo;s time</h2>
+
+<p>• More aggregating practice from last week.
+• Projects.</p>
+
+</div>
+
+
+        </div> <!-- /main -->
+
+        <script src="/assets/base.js" charset="utf-8"></script>
+
+    </body>
+</html>

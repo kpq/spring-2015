@@ -1,0 +1,65 @@
+
+<style type="text/css">
+
+  body {
+      width:760px;
+      margin:40px auto;
+      font-family: georgia, sans;
+  }
+
+  h1 {
+      border-bottom:1px solid #dedede;
+      margin-bottom:20px;
+      padding-bottom:20px;
+  }
+
+</style>
+
+
+<h1>Starter interactive</h1>
+
+<p id="total">Total dose: <span id="total-amount-value"></span></p>
+
+
+<img data-dose="2000" src="your-image-path/alkaseltzer.jpg"/>
+<img data-dose="4000" src="your-image-path/anacin.jpg"/>
+<img data-dose="800" src="your-image-path/childrenstylenol.jpg"/>
+<img data-dose="2900" src="your-image-path/coricidin.jpg"/>
+<img data-dose="1300" src="your-image-path/dayquil.jpg"/>
+<img data-dose="800" src="your-image-path/dimetapp.jpg"/>
+<img data-dose="2000" src="your-image-path/excedrin.jpg"/>
+<img data-dose="3900" src="your-image-path/hydrocodone.jpg"/>
+<img data-dose="2600" src="your-image-path/nyquil.jpg"/>
+<img data-dose="3900" src="your-image-path/oxycodone.jpg"/>
+<img data-dose="800" src="your-image-path/panadol.jpg"/>
+<img data-dose="3900" src="your-image-path/percoset.jpg"/>
+<img data-dose="3840" src="your-image-path/robitussin.jpg"/>
+<img data-dose="3250" src="your-image-path/sudafed.jpg"/>
+<img data-dose="3900" src="your-image-path/theraflu.jpg"/>
+<img data-dose="3000" src="your-image-path/tylenolextrastrngth.jpg"/>
+<img data-dose="4000" src="your-image-path/tylenolwcodeine.jpg"/>
+<img data-dose="2600" src="your-image-path/ultracet.jpg"/>
+<img data-dose="3960" src="your-image-path/vicodin.jpg"/>
+<img data-dose="3900" src="your-image-path/zicam.jpg"/>
+  
+<script src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+
+var total = 0;
+
+$( "img" ).click(function() {
+
+  //comments can be helpful
+  var drugDose = +$(this).attr("data-dose");
+
+  //update my total.
+  total += drug;
+  
+  // print the total somewhere
+  $("#total-amount-value").html(total);
+
+  });
+
+
+  
+  </script>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Getting up to speed</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/base.css">
+        <link rel="stylesheet" href="/assets/syntax.css">
+
+        <!-- Custom CSS -->
+        <!-- <link rel="stylesheet" href="/assets/main.css"> -->
+
+        <script src="/assets/d3.v3.min.js" charset="utf-8"></script>
+        <script src="/assets/topojson.v1.min.js" charset="utf-8"></script>
+        <script src="/assets/queue.v1.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="main">
+
+            <header>
+  <a href="/">NYU — Spring 2015</a> / <span>Week 1</span>
+</header>
+
+<h1>Getting up to speed</h1>
+
+<div class="lesson">
+  <p>We&rsquo;ll do normal first-day things, like talk about why we‘re all here and what we want. Class goals and policies, introductions, office hours, grading policies, project overview, configuring our laptops, signing up for tutorial and presenation duty.</p>
+
+<p>Finally, we&rsquo;ll get inspired by some code we see online and use it for a quick demonstration.</p>
+
+<h2>Housekeeping</h2>
+
+<ul>
+<li>  Make sure your info is right on the <a href="google%20spreadsheets">class roster</a></li>
+<li>  Are you sure you&rsquo;ve signed up for the <a href="link%20tktk">Google group</a>?</li>
+</ul>
+
+<h2>Introduction</h2>
+
+<p>How Amanda Got Started <a href="http://cl.ly/image/2E05331x102B">Intern</a> <a href="http://www.nytimes.com/packages/html/newsgraphics/pages/hp/2008/2008-06-03-1800.html">Delightful boxes</a> <a href="http://www.nytimes.com/interactive/2013/06/12/arts/design/Damien-Hirsts-Spot-Prices.html?_r=3&amp;">The dots are real</a></p>
+
+<p>How Kevin Got Started <a href="http://www.columbiamissourian.com/m/1497/weve-got-to-have-more-corn-expert-says/">Grad school</a> <a href="http://www.nytimes.com/interactive/2008/05/26/sports/playmagazine/200805227_IVANOVIC_GRAPHIC.html">Intern</a> <a href="http://www.nytimes.com/interactive/2012/08/05/sports/olympics/the-100-meter-dash-one-race-every-medalist-ever.html">Peaked</a></p>
+
+<p><a href="http://www.nytimes.com/newsgraphics/2013/12/30/year-in-interactive-storytelling/">2013: The Year in Interactive Storytelling</a></p>
+
+<p><a href="http://chartsnthings.tumblr.com/post/23348191031/amanda-cox-and-countrymen-chart-the-facebook-i-p-o">Learn to think like Amanda</a> <a href="http://kpq.github.io/">or Kevin</a></p>
+
+<p>Discussion, part 1</p>
+
+<ul>
+<li><p>What do you all want to get out of the class?</p></li>
+<li><p>What kinds of jobs are you going to be looking for?</p></li>
+<li><p>What has been missing so far in your journalism education?</p></li>
+</ul>
+
+<h2>Readings</h2>
+
+<p>Every week we&rsquo;ll talk about one or two pieces of journalism we&rsquo;ve read or seen and discuss them, with a student leading the discussion. We&rsquo;ll do some random drawings to keep it interesting (for you and us). Today, Amanda and Kevin will lead the discussion about the pieces we asked you to read before class, <a href="http://www.google.com">example1</a> and <a href="http://www.google.com">example2</a>.</p>
+
+<h2>Getting your machines set up</h2>
+
+<ol>
+<li>Everyone should download a <strong>text editor</strong> to their laptop, if they have one. </li>
+</ol>
+
+<p>For Mac users, we strongly recommend <a href="http://www.sublimetext.com/2">Sublime Text 2</a>. It eventually costs $70, but you can use it for free for a while. (Kevin still uses the free version and he uses it every day.) Other alternatives include <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a> (free) or <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> (not free).</p>
+
+<p>PC Users might consider <a href="http://notepad-plus-plus.org/">Notepad++</a>.</p>
+
+<ol>
+<li>Next, we need to make sure Git is installed on all our computers. Here&rsquo;s <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">a helper</a>. If you have a Mac, you probably have it installed already. We&rsquo;ll do this together.</li>
+</ol>
+
+<h3>Signing up for Github</h3>
+
+<p>If you’ve never used <a href="http://git-scm.com/">Git</a> or <a href="https://github.com">Github</a> before, don’t worry, it’s not as scary as it may seem at first. It’s basically like <a href="https://www.dropbox.com/">Dropbox</a> for programmers, with enough goofy names and concepts to make it all feel a little more complicated than it really is.</p>
+
+<h3>Using an online example.</h3>
+
+<p>Say you want to make an interactive map of the United States and you don&rsquo;t know where to start, but you DO know what you want your map to look kind of like <a href="http://bl.ocks.org/mbostock/4060606">this one</a> you&rsquo;ve already seen. </p>
+
+<p>What do we need to learn?</p>
+
+<ol>
+<li>Using our terminal.</li>
+<li>Starting a local server: <code>python -m SimpleHTTPServer</code>  <a href="http://localhost:8000/">http://localhost:8000/</a></li>
+<li>Gathering/scraping/transforming data.</li>
+<li>How to join data to a map.</li>
+<li>Some basic html and css.</li>
+<li><a href="http://www.macwright.org/d3-curvy/">Colors</a> <a href="http://colorbrewer2.org/">Colorbrewer</a></li>
+<li>[optional: Rollovers]</li>
+<li><a href="http://web.stanford.edu/%7Ejrodden/jrhome_files/electiondata.htm">Geography</a></li>
+<li><a href="https://www.youtube.com/watch?v=vVX-PrBRtTY">Projections</a></li>
+<li>Responsiveness.</li>
+<li>Publish it.</li>
+<li><a href="http://www.nytimes.com/interactive/2013/01/29/us/where-50000-guns-in-chicago-came-from.html">Content</a></li>
+<li><a href="http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/">Right form</a></li>
+<li><a href="http://deadspin.com/infographic-is-your-states-highest-paid-employee-a-co-489635228">Thinking creatively about data</a> <a href="http://www.nytimes.com/interactive/2014/05/11/upshot/up-soccer-table.html">Another</a></li>
+<li><a href="http://www.karlward.com/blog/2014/04/th_s-lan_-is-yo_r-l_nd/">Even more creatively</a></li>
+</ol>
+
+<h2>Homework</h2>
+
+<p>Your assignment is to: </p>
+
+<ol>
+<li><p>Gather data for a map (states, counties, or some other area you can find boundary information for.) You don&rsquo;t want to make a map about population, so be sure you also gather a demoninator if you need it.</p></li>
+<li><p>Do the readings for next week&rsquo;s class.</p></li>
+</ol>
+
+</div>
+
+
+        </div> <!-- /main -->
+
+        <script src="/assets/base.js" charset="utf-8"></script>
+
+    </body>
+</html>
