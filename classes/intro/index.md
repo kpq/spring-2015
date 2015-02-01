@@ -10,8 +10,8 @@ Finally, we'll get inspired by some code we see online and use it for a quick de
 
 ##Housekeeping
 
--   Make sure your info is right on the [class roster](google spreadsheets)
--   Are you sure you've signed up for the [Google group](link tktk)?
+-   Make sure your info is right on the [class roster](https://docs.google.com/spreadsheets/d/1W753AamUgr9wTKawTzDbJooIbyP_v5H_iWZg9a8ZTZY/edit#gid=0)
+-   Are you sure you've signed up for the [Google group](https://groups.google.com/forum/#!forum/spring-2015-data-journalism)?
 
 ##Introduction
 
@@ -21,8 +21,6 @@ How Kevin Got Started [Grad school](http://www.columbiamissourian.com/m/1497/wev
 
 [2013: The Year in Interactive Storytelling](http://www.nytimes.com/newsgraphics/2013/12/30/year-in-interactive-storytelling/)
 
-[Learn to think like Amanda](http://chartsnthings.tumblr.com/post/23348191031/amanda-cox-and-countrymen-chart-the-facebook-i-p-o) [or Kevin](http://kpq.github.io/)
-
 Discussion, part 1
 
 - What do you all want to get out of the class?
@@ -31,9 +29,18 @@ Discussion, part 1
 
 - What has been missing so far in your journalism education?
 
-##Readings
+<h2 id="readings">Readings</h2>
 
-Every week we'll talk about one or two pieces of journalism we've read or seen and discuss them, with a student leading the discussion. We'll do some random drawings to keep it interesting (for you and us). Today, Amanda and Kevin will lead the discussion about the pieces we asked you to read before class, [example1](http://www.google.com) and [example2](http://www.google.com).
+Every week we'll talk about one or two pieces of journalism we've read or seen and discuss them, with a student leading the discussion. We'll do some random drawings to keep it interesting (for you and us). Today, Amanda and Kevin will lead the discussion about the pieces we asked you to read before class, all about deflategate:
+
+[Sharp Football Analysis](http://www.sharpfootballanalysis.com/blog/2015/the-new-england-patriots-prevention-of-fumbles-is-nearly-impossible)
+
+[Sosh Central](http://soshcentral.com/football-science/football-statistics/2015/01/27/fumbling-data-truth-patriots-fumble-rate/)
+
+[Regressing](http://regressing.deadspin.com/why-those-statistics-about-the-patriots-fumbles-are-mos-1681805710)
+
+[Advanced NFL Analytics](http://www.advancedfootballanalytics.com/index.php/home/analysis/team-analysis/227-a-look-at-ne-s-fumbles)
+
 
 ##Getting your machines set up
 
@@ -69,10 +76,10 @@ What do we need to learn?
 14. [Thinking creatively about data](http://deadspin.com/infographic-is-your-states-highest-paid-employee-a-co-489635228) [Another](http://www.nytimes.com/interactive/2014/05/11/upshot/up-soccer-table.html)
 15. [Even more creatively](http://www.karlward.com/blog/2014/04/th_s-lan_-is-yo_r-l_nd/)
 
-##Homework
+<!-- ##Homework
 
 Your assignment is to: 
 
 1. Gather data for a map (states, counties, or some other area you can find boundary information for.) You don't want to make a map about population, so be sure you also gather a demoninator if you need it.
 
-2. Do the readings for next week's class.
+2. Do the readings for next week's class. -->
