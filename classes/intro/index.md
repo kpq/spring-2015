@@ -19,7 +19,7 @@ How Amanda Got Started [Intern](http://cl.ly/image/2E05331x102B) [Delightful box
 
 How Kevin Got Started [Grad school](http://www.columbiamissourian.com/m/1497/weve-got-to-have-more-corn-expert-says/) [Intern](http://www.nytimes.com/interactive/2008/05/26/sports/playmagazine/200805227_IVANOVIC_GRAPHIC.html) [Peaked](http://www.nytimes.com/interactive/2012/08/05/sports/olympics/the-100-meter-dash-one-race-every-medalist-ever.html)
 
-[2013: The Year in Interactive Storytelling](http://www.nytimes.com/newsgraphics/2013/12/30/year-in-interactive-storytelling/)
+[Way too many projects from 2014](http://www.nytimes.com/interactive/2014/12/29/us/year-in-interactive-storytelling.html?_r=0)
 
 Discussion, part 1
 
@@ -55,7 +55,7 @@ Every week we'll talk about one or two pieces of journalism we've read or seen a
 ###Signing up for Github
 If you’ve never used <a href="http://git-scm.com/">Git</a> or <a href="https://github.com">Github</a> before, don’t worry, it’s not as scary as it may seem at first. It’s basically like <a href="https://www.dropbox.com/">Dropbox</a> for programmers, with enough goofy names and concepts to make it all feel a little more complicated than it really is.
 
-###Using an online example.
+###Using an online example:
 Say you want to make an interactive map of the United States and you don't know where to start, but you DO know what you want your map to look kind of like [this one](http://bl.ocks.org/mbostock/4060606) you've already seen. 
 
 What do we need to learn?

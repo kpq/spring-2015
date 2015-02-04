@@ -15,4 +15,3 @@ title: Class Policies
 • Drought 6-month, 12-month, 2-year, 5-year, 10-year, 20-year smoothed averages?
 • Middle class americans and canadian health costs? or just ledes by publication?
 
-
