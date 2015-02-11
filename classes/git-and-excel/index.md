@@ -8,40 +8,15 @@ How do you interview a spreadsheet like a human being? Today, we'll work on turn
 
 ##Housekeeping
 
--   Make sure your info is right on the [wiki](https://github.com/kpq/nyu-data-journalism-fall-2014/wiki/Class-table)
--   Are you sure you've signed up for the [Google group](https://groups.google.com/forum/#!forum/data-journalism-nyu-fall-2014)?
+-   Make sure your info is right on the [class roster](https://docs.google.com/spreadsheets/d/1W753AamUgr9wTKawTzDbJooIbyP_v5H_iWZg9a8ZTZY/edit#gid=0)
+-   Are you sure you've signed up for the [Google group](https://groups.google.com/forum/#!forum/spring-2015-data-journalism)?
+- More introductions
 
 ##Critique
 
-- Here's a link to the <a href="https://github.com/kpq/nyu-data-journalism-fall-2014/wiki/Critique-schedule">Critique schedule</a>
-
-## Let's get our data on the internet.
-
-1. Make sure you have [GitHub for Mac](https://mac.github.com/).
-2. Sign into your GitHub account.
-3. Make a new repository. Name it something easy like data-journalism or monkeys
-4. Make a gh-pages branch in that repository.
-5. Choose "Clone in Desktop." and save the folder to some easy place like your desktop.
-6. Switch to the gh-pages branch in your GitHub client.
-7. Make a file called index.html in the folder you downloaded.
-8. Commit and sync your changes. [Here are some instructions](https://help.github.com/articles/making-changes) if you like pictures.
-9. Hope something shows up at a url like this: <code>http://m1arc00.github.io/temp2</code> where m1arc00 is your user name and temp2 is the name of your repository.
-10. Move your data into your folder, and add a link to it in your index.html file. Then sync everything again.
-
-## Discussion: The data you brought
-
-Please add a short description of the data you brought to class <a href = "https://docs.google.com/document/d/1qS2B7V0xQDpo6mOoSPWwR4W2OaaR1glAc84cEoYvVKA/edit">here.</a>
-
-- Did anyone do anything interesing to collect their data? 
-
-- What format did you bring your data in? 
-
-- Right now, how many of your datasets are really just about New York, California and Texas being big?
-
-- If you were to present your data, what are some of the choices — like <a href="http://www.macwright.org/d3-curvy/">color</a> – that would affect how your readers interpret it? Here's a real-world example of how even-reasonable <a href="http://wonkviz.tumblr.com/post/68781802020/a-tale-of-two-choropleths">color choices matter.</a>
-
-- How would you decide if your map <a href="http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/">shouldn't be a map?</a>
-
+- Some lucky classmates are leading our discussion about a [tricky](http://iquantny.tumblr.com/post/83696310037/meet-the-fire-hydrant-that-unfairly-nets-nyc
+) [fire](http://iquantny.tumblr.com/post/83770853308/update-single-fire-hydrant-nets-nyc-33-000-a
+) [hydrant](http://iquantny.tumblr.com/post/87573867759/success-how-nyc-open-data-and-reddit-saved-new).
 
 
 ## Enough to make you dangerous
@@ -70,51 +45,27 @@ Please add a short description of the data you brought to class <a href = "https
 
 ##Basic skills
 
-Here is some data on <a href = "http://kpq.github.io/sherp-31/assets/data/drunkdrivingdeaths.xls">drunk driving deaths</a> in 2011.
+Here is some data on <a href = "drunkdrivingdeaths.xls">drunk driving deaths</a> in 2013 from the National Highway Traffic Safety Administration.
+
 
 1. Download the data to your computer, and open it in your spreadsheet program of choice. 
 2. What were the 3 states with the most deaths? The 3 with the fewest?
-3. Here is some data on <a href = "http://kpq.github.io/sherp-31/assets/data/statepopulation.xls"> population</a>. Add it to your spreadsheet using a function called <code>vlookup</code>. 
-4. What were the states with the highest rates? The lowest?
+3. Find some state <a href = "http://www.census.gov/popest/data/state/totals/2013/"> population estimates</a>. Add them to your spreadsheet using a function called <code>vlookup</code>. 
+4. What were the states with the highest rates deaths due to drunk driving? The lowest?
 5. How many deaths occured in the South? What region of the country had the highest rate of deaths? Here are some <a href = "http://kpq.github.io/sherp-31/assets/data/nytnames.xls">region codes</a> that might help you. For practice, answer this question by using a <code>pivot table</code>. Pivot tables are one way to summarize data.
-
-
-##Excel work doesn't have to look like it
-
-<img src="http://graphics8.nytimes.com/packages/images/multimedia/bundles/projects/2013/BostonMoment/moment1600.jpg">
-
-Your job is to identify as many people as you can in the picture above.
-
-1. The easiest people to identify in the picture should be the runners. From  the online <a href="http://boston-iframe.r.mikatiming.de/2013/?event=R&idp=999999117A7326000008693E&pid=start">results</a>, acquire a spreadsheet of the last runners to finish.
-
-2. Here's a wrinkle: not everyone in the photo started at the same time. Here's what the race organizers have to say about that: "Red bibs (numbers 101 - 8,999) are assigned to Wave 1 (10:00 a.m.). White bibs (numbers 9,000 to 17,999) are assigned to Wave 2 (10:20 a.m.). Blue bibs (numbers 18,000 +) are assigned to Wave 3 (10:40 a.m.)."
-
-3. Subtract 40 minutes from the finish gun off of everyone with a bib number less than 9000, and 20 minutes from everyone with a bib number from 9000 to 17999.
-
-4. Make a list of runners to call. Put their first and last names into separate columns with some combination of "Data -> Text to columns" and find and replace.
-
-5. Here's the <a href="http://www.nytimes.com/interactive/2013/04/22/sports/boston-moment.html">NYT take.</a>
-
+5. On the second second sheet of the drunk driving data, there is a bit more data. Use this sheet to ask and answer a more interesting question than those we have answered so far.
  
-##Basic skills when your data is bigger
+##It's exactly the same when your data is a little bigger.
 
-A digression: sometimes data is published to the web, but, without context, it's hard to know whether it's interesting or not. Here's <a href = "http://schools.nyc.gov/AboutUs/data/Attendance.htm">an example</a> about 
-<a href = "http://www.wnyc.org/story/fewer-faces-nyc-schools-after-storm/">NYC school attendance from WNYC.</a>
-It's easy to pull down this data every day, but, pretty quickly, it's going to get big enough that you will regret any cheating / manual labor you might have done in our earlier exercises today.
+<p>Here is some data on where <a href="http://kpq.github.io/nyu-data-journalism-fall-2014/classes/codey-code-code/chicago-starter.xlsx">guns recovered in Chicago</a> between 2001 and March 2012 came from.</p>
 
-1. See if you can find where the data that powers the <a href = "http://citibikenyc.com/stations">Citibike stations map</a> lives.
-
-2. Here is the same <a href = "http://kpq.github.io/sherp-31/assets/data/bikes.csv">data</a> for every 15 minutes on Wednesday, June 5.
-
-3. Filter the data to look at a single station.
-
-4. What time of day are the fewest bikes available system-wide?
-
-5. Add a column for which <a href = "http://kpq.github.io/sherp-31/assets/data/bike-neighborhoods.csv">neighborhood</a> each station belongs to, and answer the same question for Midtown South, the East Village, and another neighborhood of your choice. <img width = 300 src="neighborhoods.png">
-
-6. Why might you want to collect this data yourself instead of just asking CitiBike?
-
-7. In the <a href = "https://docs.google.com/document/d/1QVt45d0JfwLfa0RQtjULr68jZeWFKqEN6Ij4RU5sGVY/edit">Google doc</a> we used earlier today, make a list of questions we could answer with this type of data, either by itself, or by joining it to other data. 
+1. What counties did the most guns come from?
+2. What counties in Mississippi did the most guns come from? The fewest?
+3. What states did the most guns come from?
+4. <a href = "http://www.ers.usda.gov/dataFiles/CountyLevelDatasets/PopulationEstimates.xls"> Per capita?</a>. 
 
 
-##Homework
+##Choose your own adventure.
+1. Using some of the skills we learned last time, make a map about the guns recovered in Chicago.
+2. What happens when the data is even bigger? Find the fire hydrant in NYC that now has the most tickets.
+
