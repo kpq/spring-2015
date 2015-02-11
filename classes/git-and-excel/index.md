@@ -45,15 +45,15 @@ How do you interview a spreadsheet like a human being? Today, we'll work on turn
 
 ##Basic skills
 
-Here is some data on <a href = "drunkdrivingdeaths.xls">drunk driving deaths</a> in 2013 from the National Highway Traffic Safety Administration.
+Here is some data on <a href = "drunkdrivingdeaths.xls">drunk driving deaths</a> in 2013 from the National Highway Traffic Safety Administration. 
 
 
 1. Download the data to your computer, and open it in your spreadsheet program of choice. 
 2. What were the 3 states with the most deaths? The 3 with the fewest?
 3. Find some state <a href = "http://www.census.gov/popest/data/state/totals/2013/"> population estimates</a>. Add them to your spreadsheet using a function called <code>vlookup</code>. 
-4. What were the states with the highest rates deaths due to drunk driving? The lowest?
+4. What were the states with the highest rates? The lowest?
 5. How many deaths occured in the South? What region of the country had the highest rate of deaths? Here are some <a href = "http://kpq.github.io/sherp-31/assets/data/nytnames.xls">region codes</a> that might help you. For practice, answer this question by using a <code>pivot table</code>. Pivot tables are one way to summarize data.
-5. On the second second sheet of the drunk driving data, there is a bit more data. Use this sheet to ask and answer a more interesting question than those we have answered so far.
+5. On the second tab of the drunk driving data, there is a breakdown of how intoxicated drivers were in fatal crashes. Use this sheet to ask and answer a more interesting question than the ones we have answered so far.
  
 ##It's exactly the same when your data is a little bigger.
 
