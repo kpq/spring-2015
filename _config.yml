@@ -3,4 +3,4 @@ markdown: redcarpet
 redcarpet:
   extensions: [smart]
 pygments: true
-baseurl: /nyu-data-journalism-fall-2014
+baseurl: /spring-2015
