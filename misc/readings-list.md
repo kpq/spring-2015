@@ -6,6 +6,8 @@ title: Class Policies
 #List of class readings
 
 • Cairo vs. Quealy in the case of Medicare charts: must you always show all the data?
+
+
 • Many examples of truer than true: baseball, leo live charting
 • Jobs numbers dancing, but not quite right.
 • Many examples from I quant NY
