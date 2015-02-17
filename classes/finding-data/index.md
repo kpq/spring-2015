@@ -8,7 +8,7 @@ title: Finding Data and Thinking Like a Robot
 • We should probably talk about [your projects](../../projects/).
 
 ## Discussion:
-Read and form an opinion about the [reductions in health care projections](http://www.nytimes.com/2014/09/01/opinion/paul-krugman-the-medicare-miracle.html?_r=0). 
+Read and form an opinion about the [reductions in health care projections](http://www.nytimes.com/2014/08/28/upshot/medicare-not-such-a-budget-buster-anymore.html). 
 
 What's good about the chart form? (Note [the original](http://www.nytimes.com/interactive/2010/02/02/us/politics/20100201-budget-porcupine-graphic.html), used for budget deficits.)
 
