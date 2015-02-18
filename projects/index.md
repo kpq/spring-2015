@@ -25,6 +25,18 @@ dd.example a {
   padding-right: 4px;
 }
 
+.p-ex {
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  font-family: courier;
+}
+
+.p-ex p {
+  font-size: 15px;
+
+}
+
 </style>
 
 
@@ -140,6 +152,7 @@ Each pitch should include:
 Here's an example of a couple pitches of projects we've worked on in class already. It doesn't need to be in exactly this format, but this is the general idea we're looking for. (Again, we're looking for three.)
 
 **Project proposal example**
+<div class="p-ex">
 
 Last year, on average, Major League baseball teams struck out more than at any time in its 112 year history. This subject has been [written about before](http://bleacherreport.com/articles/1687201-why-the-single-season-hitter-strikeouts-record-will-be-the-next-to-fall-in-mlb), but no news organization has visualized the distribution or, to my satisfaction, offered a significant answer to why it has been rising so steadily, even in the post-steroids era. This could be published soon, with a focus on how teams currently in the playoffs have been affected, or it could be published at the beginning of next year, as a preview to the next season.
 
@@ -150,7 +163,7 @@ I'd like to talk to a couple hitting coaches to see if they have recognized this
 I would probably need to learn how to scrape the data from baseball-reference, since I don't want to manually download 5000 web pages by hand, and I would also need to learn how to do more effective user interaction with a D3 chart than I do right now.
 
 There are a number of stat-based sports sites that I could pitch this to, including the [Baseball Prospectus blog](http://www.baseballprospectus.com/blog/), [FanGraphs](http://www.fangraphs.com/blogs/) or more local sites, like the sports desks of the San Francisco Chronicle or the Oakland Tribune.
-
+</div>
 
 Email Kevin and Amanda with any questions.
 
