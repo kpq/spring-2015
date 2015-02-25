@@ -56,4 +56,5 @@ Let's follow these instructions:
 ## Homework
 • Add 3 or more helpful comments to your [classmates' pitches](https://docs.google.com/document/d/18PTOMXbPqJaTaK9jp9ijuxKvFg_ctK1g0QM2-qhWbcY/edit)
 (Include your name at the end of your comment.)
-• Make progress on your project.
+
+• Make tangible progress on your project that you push to your github page.
