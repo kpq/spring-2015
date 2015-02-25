@@ -57,4 +57,5 @@ Let's follow these instructions:
 • Add 3 or more helpful comments to your [classmates' pitches](https://docs.google.com/document/d/18PTOMXbPqJaTaK9jp9ijuxKvFg_ctK1g0QM2-qhWbcY/edit)
 (Include your name at the end of your comment.)
 
-• Make tangible progress on your project that you push to your github page.
+• Make tangible progress on your project. Push this progress to your github page.
+
