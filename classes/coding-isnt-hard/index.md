@@ -23,7 +23,7 @@ You don't necessarily need to know html and CSS to be successful journalist in 2
 5. We'll style this to look as much like the Onion as possible. Use your inspector!
 
 ##Advanced
-If there's time, take this [recent Upshot article](http://www.nytimes.com/2015/03/05/upshot/ben-bernanke-has-an-impressive-passive-aggressive-streak-and-other-things-we-learned-in-the-new-fed-transcripts.html?abt=0002&abg=1) and mark it up on your own. You can add links if you're feeling fancy. Here's the catch: make it look like <a href="http://www.vox.com/2015/3/4/8149547/ferguson-racism-police-courts">a Vox article</a>.
+If there's time, take this [recent Upshot article](http://www.nytimes.com/2015/03/05/upshot/ben-bernanke-has-an-impressive-passive-aggressive-streak-and-other-things-we-learned-in-the-new-fed-transcripts.html?abt=0002&abg=1) and mark it up on your own. Here is the [starter file](bernanke.txt). You can add links if you're feeling fancy. Here's the catch: make it look like <a href="http://www.vox.com/2015/3/4/8149547/ferguson-racism-police-courts">a Vox article</a>.
 
 ##Homework
 Re-pitch your project with the feedback you received from your classmates and us. Think focus + small/manageable.
