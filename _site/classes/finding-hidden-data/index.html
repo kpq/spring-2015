@@ -98,13 +98,13 @@
 <li><p><a href="https://addons.mozilla.org/en-US/firefox/addon/downthemall/">DownThemAll</a> lets you cheat/fake scrape.</p></li>
 <li><p>Google for a database of zip codes.</p></li>
 <li><p>In excel, generate a column that looks like this:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href =</span><span class="err"> </span><span class="s">&#39;http://www.fight4rx.org/map/getpharms3.php?address=11201&#39;</span><span class="nt">&gt;</span>11201<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href =</span><span class="err"> </span><span class="s">&#39;http://www.fight4rx.org/map/getpharms3.php?address=11201&#39;</span><span class="nt">&gt;</span>11201<span class="nt">&lt;/a&gt;</span>
 </code></pre></div></li>
 <li><p>Copy 10 of your links into a new html file.</p></li>
 <li><p>Install a Firefox add-in called &ldquo;<a href="http://www.downthemall.net/">DownThemAll!</a>&rdquo;</p></li>
 <li><p>Download your 10 links into a new folder.</p></li>
 <li><p>CD into your folder and copy and paste the following:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">for file in *.html
+<div class="highlight"><pre><code class="text language-text" data-lang="text">for file in *.html
 do
   cat &quot;$file&quot;
   echo
