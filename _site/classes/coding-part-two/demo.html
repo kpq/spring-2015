@@ -1,0 +1,92 @@
+<style type="text/css">
+
+ body {
+     width:760px;
+     margin:40px auto;
+     font-family: georgia, sans;
+ }
+
+ h1 {
+     border-bottom:1px solid #dedede;
+     margin-bottom:20px;
+     padding-bottom:20px;
+ }
+
+ /* this applies to all .dose divs*/
+ .dose {
+   width: 100px;
+   height: 100px;
+   display: inline-block;
+   background-color: #f0f0f0;
+
+   /* don't worry about this so much.*/
+   -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+ /* this applies to divs classed dose AND selected-dose */
+ .dose.selected-dose {
+   background-color: red;
+ }
+
+ .current-total {
+  font-size:31px;
+ }
+
+ </style>
+
+
+ <h1>Starter interactive</h1>
+
+ <div class="dosages-container">
+   <div class="dose tylenol" data-dosage="900"></div>
+   <div class="dose robitussin" data-dosage="1200"></div>
+   <div class="dose cough-syrup" data-dosage="400"></div>
+ </div>
+
+ <h3 class="current-total-container">
+  My current total is: <span class="current-total">0</span>
+ </h3>
+
+
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+ <script type="text/javascript">
+
+
+
+  //I start with zero.
+  var total = 0;
+
+  $(".dose").click(function(evt) {
+
+    var button = $(this);
+
+    //how much is in the dose I jut clicked (number, please, not string)?
+    var thisDose = button.data("dosage");
+
+    // is this already selected?
+    var isAlreadySelected = button.hasClass("selected-dose");
+
+    //if so, unselect it and remove its dosage from my total.
+    if (isAlreadySelected === true) {
+      button.removeClass("selected-dose");
+      total = total - thisDose;
+    }
+
+    //if not, select it and add its dosage from my total.
+    if (isAlreadySelected === false) {
+      button.addClass("selected-dose");
+      total = total + thisDose;
+    }
+
+    $(".current-total").text(total);
+
+});
+
+
+ </script>
