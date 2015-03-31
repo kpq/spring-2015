@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Finishing up programming, and projects</title>
+        <title>Scraping Makes You Feel Like a Small God</title>
         <meta name="viewport" content="width=device-width">
 
         <!-- syntax highlighting CSS -->
@@ -21,65 +21,52 @@
         <div class="main">
 
             <header>
-  <a href="/">NYU — Spring 2015</a> / <span>Week 5</span>
+  <a href="/">NYU — Spring 2015</a> / <span>Week 6</span>
 </header>
 
-<h1>Finishing up programming, and projects</h1>
+<h1>Scraping Makes You Feel Like a Small God</h1>
 
 <div class="lesson">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-
-<p>We&rsquo;ll finish what we started in the same groups we started them in, all while doing some projects chats in the background.</p>
 
 <h2>Housekeeping</h2>
 
 <p>Questions?</p>
 
-<h2>Basic HTML and CSS</h2>
+<h2>Ruby</h2>
 
-<p>Recall the list of things we wanted to accomplish when we started out this task. From last week:</p>
+<p>Do you have it? Check by typing &ldquo;ruby&rdquo; at your terminal. If you get something like &ldquo;command not found&rdquo;, <a href="https://www.ruby-lang.org/en/downloads/">download Ruby</a>.</p>
 
-<ul>
-<li>Probably the assets.</li>
-<li>Probably the data for maximum daily dose by drug.</li>
-<li>Probably how to make a list/grid of things.</li>
-<li>Probably a way to store data in Javascript (we&rsquo;ve done this before)</li>
-<li>Probably a way to &ldquo;do stuff when you click things&rdquo;. One popular library non-experts do this is with <a href="http://jquery.com/">jQuery</a>.</li>
-<li>Probably a way to do basic math in a web browser. (JavaScript seems like a good idea.)</li>
-</ul>
+<p>We also need a library called <a href="http://watir.com/">watir</a>.
+If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal will get you it.</p>
 
-<p>Below are some snippets that could be helpful to you. We&rsquo;ll go over these together. Feel free to use the starter file Amanda provided last week to follow along.</p>
+<h2>Watir</h2>
 
-<h1>jQuery tips</h1>
+<p>Let&rsquo;s follow <a href="http://watir.com/examples/">the example</a>.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
 
-<p><a href="https://jquery.com/">jQuery</a> is a common library developers load to &ldquo;do stuff&rdquo; in Javascript. It&rsquo;s helpful because it performs reliably in internet explorer 6 and Safari on your iPhone 6. To load it, paste this code snippet in your html file:</p>
-<div class="highlight"><pre><code class="html language-html" data-lang="html">  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div>
-<p>When it&rsquo;s loaded, you should be able to use it with the <code>$</code>, which is just shorthand for typing <code>jQuery</code>. An easy way to find out if it loaded correctly is simply to type <code>jQuery</code> in your Javascript console. If it returns something (even if you don&rsquo;t understand it), it loaded! You can do this on almost any web page.</p>
+<span class="nx">browser</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
+<span class="nx">browser</span><span class="p">.</span><span class="kr">goto</span> <span class="s1">&#39;http://bit.ly/watir-example&#39;</span>
 
-<h3>Detecting when you click something</h3>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">text_field</span><span class="p">(</span><span class="o">:</span><span class="nx">name</span> <span class="o">=&gt;</span> <span class="s1">&#39;entry.1000000&#39;</span><span class="p">).</span><span class="nx">set</span> <span class="s1">&#39;Amanda&#39;</span>
 
-<p>These kinds of things are called <a href="http://api.jquery.com/category/events/">events</a>, so you might want to look for a &ldquo;click&rdquo; event. here&rsquo;s the <a href="http://api.jquery.com/click/">documentation page</a> for that, which is full of great examples.</p>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">text_field</span><span class="p">(</span><span class="o">:</span><span class="nx">name</span> <span class="o">=&gt;</span> <span class="s1">&#39;entry.1000001&#39;</span><span class="p">).</span><span class="nx">set</span> <span class="s2">&quot;I come here from Australia. \n The weather is great here.&quot;</span>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">radio</span><span class="p">(</span><span class="o">:</span><span class="nx">value</span> <span class="o">=&gt;</span> <span class="s1">&#39;Watir&#39;</span><span class="p">).</span><span class="nx">set</span>
 
-<p>In our case, many of you put the values for your dosages as <code>data-attributes</code> of your divs. So one kind of product could look like this:</p>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dose tylenol&quot;</span> <span class="na">data-dosage=</span><span class="s">&quot;3000&quot;</span><span class="nt">&gt;</span>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">checkbox</span><span class="p">(</span><span class="o">:</span><span class="nx">value</span> <span class="o">=&gt;</span> <span class="s1">&#39;Ruby&#39;</span><span class="p">).</span><span class="nx">set</span>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">checkbox</span><span class="p">(</span><span class="o">:</span><span class="nx">value</span> <span class="o">=&gt;</span> <span class="s1">&#39;Python&#39;</span><span class="p">).</span><span class="nx">set</span>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">checkbox</span><span class="p">(</span><span class="o">:</span><span class="nx">value</span> <span class="o">=&gt;</span> <span class="s1">&#39;Python&#39;</span><span class="p">).</span><span class="nx">clear</span>
 
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-<p>jQuery targets things with CSS selectors, so if you want to do something any time you click on a div of the class <code>dose</code>, you would do something like this in your javascript tags (more on jQuery data attribution is <a href="http://api.jquery.com/data/">here</a>:</p>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">select_list</span><span class="p">(</span><span class="o">:</span><span class="nx">name</span> <span class="o">=&gt;</span> <span class="s1">&#39;entry.1000004&#39;</span><span class="p">).</span><span class="nx">select</span> <span class="s1">&#39;Chrome&#39;</span>
 
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.dose&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+<span class="err">#</span> <span class="nx">your</span> <span class="nx">exercise</span><span class="o">:</span> <span class="nx">figure</span> <span class="nx">out</span> <span class="nx">how</span> <span class="nx">to</span> <span class="nx">click</span> <span class="nx">a</span> <span class="nx">button</span> <span class="nx">about</span> <span class="nx">how</span> <span class="nx">happy</span> <span class="nx">you</span> <span class="nx">are</span><span class="p">.</span>
 
+<span class="nx">browser</span><span class="p">.</span><span class="nx">button</span><span class="p">(</span><span class="o">:</span><span class="nx">name</span> <span class="o">=&gt;</span> <span class="s1">&#39;submit&#39;</span><span class="p">).</span><span class="nx">click</span>
 
+<span class="nx">puts</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">text</span><span class="p">.</span><span class="nx">include</span><span class="o">?</span> <span class="s1">&#39;Your response has been recorded.&#39;</span>
+<span class="nx">puts</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">title</span> <span class="o">==</span> <span class="s1">&#39;Thanks!&#39;</span>
 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;event is:&quot;</span><span class="p">,</span> <span class="nx">evt</span><span class="p">);</span>
-
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;dose is&quot;</span><span class="p">,</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;dosage&quot;</span><span class="p">);</span>
-
-<span class="p">});</span>
-
-<span class="nt">&lt;/script&gt;</span>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">close</span>
 </code></pre></div>
 <p>The <code>this</code> is frankly a little abstract.</p>
 
