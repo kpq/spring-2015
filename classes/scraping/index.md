@@ -57,6 +57,8 @@ browser.close
 
 
 ###Let's try something you might really want to do.
+We've used watir to scrape [power outage maps](http://outage.cl-p.com/outage/outagemap.aspx), [fill out this form](http://calc.taxpolicycenter.org/marriagepenaltycalculator/) 100,000 times, get [lists of donors](https://donate.aamaadmiparty.org/Report/Donation_List.aspx) in Indian elections and [grab thousands of art auction results in China](http://artso.artron.net/auction/search_auction.php?keyword=&showtype=1&auctiontype=020200000000&orgnum=3&orgid=JG0102&listtype=&orgenname_16=&artist=&startprice=&endprice=&starttime=2003-01-01&endtime=2003-12-31)
+
 WNYC collects NYC school attendance data every day. Having it lets them [respond to news](http://www.wnyc.org/story/school-was-open-most-parents-kept-students-home/), and also feeds some enterprise. 
 
 ```javascript
