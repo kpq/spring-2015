@@ -68,8 +68,35 @@ puts browser.link(:text => 'Microsoft Excel').click
 
 ```
 
+### Could watir have helped us a couple of weeks ago?
+Maybe, but this is probably overkill.
+
+```javascript
+#http://stackoverflow.com/questions/1259009/watir-image-processing
+require 'watir-webdriver'
+require 'open-uri'
+b = Watir::Browser.new :chrome
+
+b.goto "http://projects.propublica.org/drug-labels/"
+sleep 3
+
+images = b.images(:src => /projectx\/labels/)
+
+images.each do |img|
+  
+    url = img.src
+    name =  url.gsub(/.*\//, '')
+
+      File.open(name, 'wb') do |f|
+             f.write open(url).read
+      end 
+
+end
+```
+
+
 ###What about something one of you really does want to do?
-Part of Jacqui's project requires knowing where the top-rated beers on BeerAdvocate.com are made. 
+Part of Jacqui's project requires knowing where the top-rated beers on [BeerAdvocate.com](http://www.beeradvocate.com/lists/top/) are made. 
 
 ```javascript
 
@@ -101,6 +128,9 @@ end
 browser.close
 ```
 
+###Use our new knowledge.
+Answer Jacqui's question (you will probably use your excel skills). 
+
 ###Time permitting
-Make the pivot table to answer Jacqui's question. Then, gather Bro and community ratings for the top-rated beers, and [do something] with this information.
+Gather Bro and community ratings for the top-rated beers, and come up with a lede based on this information.
 

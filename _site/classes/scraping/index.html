@@ -81,9 +81,33 @@ If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal w
 
 <span class="nx">puts</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="o">:</span><span class="nx">text</span> <span class="o">=&gt;</span> <span class="s1">&#39;Microsoft Excel&#39;</span><span class="p">).</span><span class="nx">click</span>
 </code></pre></div>
+<h3>Could watir have helped us a couple of weeks ago?</h3>
+
+<p>Maybe, but this is probably overkill.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">http</span><span class="o">:</span><span class="c1">//stackoverflow.com/questions/1259009/watir-image-processing</span>
+<span class="nx">require</span> <span class="s1">&#39;watir-webdriver&#39;</span>
+<span class="nx">require</span> <span class="s1">&#39;open-uri&#39;</span>
+<span class="nx">b</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
+
+<span class="nx">b</span><span class="p">.</span><span class="kr">goto</span> <span class="s2">&quot;http://projects.propublica.org/drug-labels/&quot;</span>
+<span class="nx">sleep</span> <span class="mi">3</span>
+
+<span class="nx">images</span> <span class="o">=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">images</span><span class="p">(</span><span class="o">:</span><span class="nx">src</span> <span class="o">=&gt;</span> <span class="sr">/projectx\/labels/</span><span class="p">)</span>
+
+<span class="nx">images</span><span class="p">.</span><span class="nx">each</span> <span class="k">do</span> <span class="o">|</span><span class="nx">img</span><span class="o">|</span>
+
+    <span class="nx">url</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">src</span>
+    <span class="nx">name</span> <span class="o">=</span>  <span class="nx">url</span><span class="p">.</span><span class="nx">gsub</span><span class="p">(</span><span class="sr">/.*\//</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+      <span class="nx">File</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">f</span><span class="o">|</span>
+             <span class="nx">f</span><span class="p">.</span><span class="nx">write</span> <span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">).</span><span class="nx">read</span>
+      <span class="nx">end</span> 
+
+<span class="nx">end</span>
+</code></pre></div>
 <h3>What about something one of you really does want to do?</h3>
 
-<p>Part of Jacqui&rsquo;s project requires knowing where the top-rated beers on BeerAdvocate.com are made. </p>
+<p>Part of Jacqui&rsquo;s project requires knowing where the top-rated beers on <a href="http://www.beeradvocate.com/lists/top/">BeerAdvocate.com</a> are made. </p>
 <div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
 
 <span class="nx">browser</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
@@ -111,9 +135,13 @@ If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal w
 
 <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span>
 </code></pre></div>
+<h3>Use our new knowledge.</h3>
+
+<p>Answer Jacqui&rsquo;s question (you will probably use your excel skills). </p>
+
 <h3>Time permitting</h3>
 
-<p>Make the pivot table to answer Jacqui&rsquo;s question. Then, gather Bro and community ratings for the top-rated beers, and [do something] with this information.</p>
+<p>Gather Bro and community ratings for the top-rated beers, and come up with a lede based on this information.</p>
 
 </div>
 
