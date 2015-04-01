@@ -35,7 +35,7 @@
 
 <h2>Ruby</h2>
 
-<p>Do you have it? Check by typing &ldquo;ruby&rdquo; at your terminal. If you get something like &ldquo;command not found&rdquo;, <a href="https://www.ruby-lang.org/en/downloads/">download Ruby</a>.</p>
+<p>What is it? Do you have it? Check by typing &ldquo;ruby&rdquo; at your terminal. If you get something like &ldquo;command not found&rdquo;, <a href="https://www.ruby-lang.org/en/downloads/">download Ruby</a>.</p>
 
 <p>We also need a library called <a href="http://watir.com/">watir</a>.
 If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal will get you it.</p>
@@ -68,111 +68,52 @@ If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal w
 
 <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span>
 </code></pre></div>
-<p>The <code>this</code> is frankly a little abstract.</p>
+<h3>What about something you might really want to do?</h3>
 
-<h3>Doing math on strings</h3>
+<p>WNYC collects NYC school attendance data every day. Having it lets them <a href="http://www.wnyc.org/story/school-was-open-most-parents-kept-students-home/">respond to news</a>, and also feeds some enterprise. </p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
 
-<p>Data types are always annoying – numbers and words and dates are different to your browser, and we need to knwo what we&rsquo;re working with. In your console, type</p>
-<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript">  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&quot;3000&quot;</span><span class="p">;</span>
+<span class="nx">browser</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
 
-  <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
+<span class="nx">browser</span><span class="p">.</span><span class="kr">goto</span> <span class="s1">&#39;http://schools.nyc.gov/AboutUs/schools/data/Attendance.htm&#39;</span>
 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">puts</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">span</span><span class="p">(</span><span class="o">:</span><span class="nx">id</span> <span class="o">=&gt;</span> <span class="s1">&#39;doecontrol_middlecentercontainer_a_attendance_lblPcnt&#39;</span><span class="p">).</span><span class="nx">text</span>
+
+<span class="nx">puts</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="o">:</span><span class="nx">text</span> <span class="o">=&gt;</span> <span class="s1">&#39;Microsoft Excel&#39;</span><span class="p">).</span><span class="nx">click</span>
 </code></pre></div>
-<p>This is a problem that has been <a href="https://www.google.com/search?q=javascript+turning+a+string+into+a+number&amp;oq=javascript+turning+a+string+into+a+number&amp;aqs=chrome..69i57j69i65l2j0l2j69i60.5205j0j7&amp;sourceid=chrome&amp;es_sm=119&amp;ie=UTF-8">Googled before</a>.</p>
+<h3>What about something one of you really does want to do?</h3>
 
-<h3>Having and updating variables</h3>
+<p>Part of Jacqui&rsquo;s project requires knowing where the top-rated beers on BeerAdvocate.com are made. </p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
 
-<p>To have a calculator of any kind, you need to be able to keep track of a few numbers. Variables can help!</p>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="nx">browser</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
+<span class="nx">browser</span><span class="p">.</span><span class="kr">goto</span> <span class="s1">&#39;http://www.beeradvocate.com/lists/top/&#39;</span>
 
-<span class="c1">//I start with zero.</span>
-<span class="kd">var</span> <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">table</span> <span class="o">=</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">table</span><span class="p">(</span><span class="o">:</span><span class="nx">index</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nx">links</span> <span class="o">=</span> <span class="nx">table</span><span class="p">.</span><span class="nx">links</span><span class="p">()</span>
+<span class="nx">urls</span> <span class="o">=</span> <span class="nx">links</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="o">&amp;:</span><span class="nx">href</span><span class="p">)</span>
+<span class="nx">stop</span> <span class="o">=</span> <span class="nx">urls</span><span class="p">.</span><span class="nx">length</span>
 
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.dose&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">..</span><span class="nx">stop</span><span class="p">).</span><span class="nx">step</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">i</span><span class="o">|</span>
 
+  <span class="nx">begin</span>
+      <span class="nx">browser</span><span class="p">.</span><span class="kr">goto</span> <span class="nx">urls</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+      <span class="nx">sleep</span> <span class="mi">1</span>
+      <span class="nx">name</span> <span class="o">=</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">h1</span><span class="p">.</span><span class="nx">text</span>
+      <span class="nx">place</span> <span class="o">=</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="o">:</span><span class="nx">href</span><span class="p">,</span> <span class="sr">/place/</span><span class="p">).</span><span class="nx">text</span>
+      <span class="nx">style</span> <span class="o">=</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="o">:</span><span class="nx">href</span><span class="p">,</span> <span class="sr">/style/</span><span class="p">).</span><span class="nx">text</span>
+      <span class="nx">puts</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nx">place</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nx">style</span>
+  <span class="nx">rescue</span> 
+     <span class="nx">puts</span> <span class="s2">&quot;uhoh &quot;</span> <span class="o">+</span> <span class="nx">urls</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+  <span class="nx">end</span>
 
-  <span class="c1">//how much is in the dose I jut clicked (number, please, not string)?</span>
-  <span class="kd">var</span> <span class="nx">thisDose</span> <span class="o">=</span> <span class="o">+</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;dosage&quot;</span><span class="p">);</span>
+<span class="nx">end</span>
 
-  <span class="c1">//my total is equal to the previous total plus what I just clicked</span>
-  <span class="nx">total</span> <span class="o">=</span> <span class="nx">thisDose</span> <span class="o">+</span> <span class="nx">total</span><span class="p">;</span>
-
-<span class="p">});</span>
-
-<span class="nt">&lt;/script&gt;</span>
+<span class="nx">browser</span><span class="p">.</span><span class="nx">close</span>
 </code></pre></div>
-<h3>Selection and de-selection</h3>
+<h3>Time permitting</h3>
 
-<p>Any button you want to click, you want to be able to un-click. That&rsquo;s an issue of <em>state</em> and of <em>presentation</em> – recognizing the state your button is in and displaying it to reflect that state.</p>
-
-<p>An easy to do this is by adding a CSS class to the div when it is selected. </p>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
-
-  <span class="c">/* this applies to all .dose divs*/</span>
-  <span class="nc">.dose</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
-    <span class="k">height</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
-    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-    <span class="k">background-color</span><span class="o">:</span> <span class="m">#f0f0f0</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="c">/* this applies to divs classed dose AND selected-dose */</span>
-  <span class="nc">.dose.selected-dose</span> <span class="p">{</span>
-    <span class="k">background-color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
-  <span class="p">}</span>
-
-<span class="nt">&lt;/style&gt;</span>
-</code></pre></div>
-<h3>Detecting classes</h3>
-
-<p>Of course, you need to know whether something is selected when you&rsquo;re doing math – are you adding to the total or subtracting from it? Here&rsquo;s what Googling &ldquo;Detecting classes in jQuery&rdquo; <a href="https://www.google.com/search?q=detecting+classes+in+jquery&amp;oq=detecting+classes+in+jquery&amp;aqs=chrome..69i57.3390j0j7&amp;sourceid=chrome&amp;es_sm=119&amp;ie=UTF-8">got me</a>. The <code>hasClass</code> function in particular seems helpful. Here are <a href="https://api.jquery.com/hasclass/">the docs</a> for that.</p>
-<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-
-<span class="c1">//I start with zero.</span>
-<span class="kd">var</span> <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.dose&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-
-  <span class="c1">//how much is in the dose I jut clicked (number, please, not string)?</span>
-  <span class="kd">var</span> <span class="nx">thisDose</span> <span class="o">=</span> <span class="o">+</span><span class="nx">button</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;dosage&quot;</span><span class="p">);</span>
-
-  <span class="c1">// is this already selected?</span>
-  <span class="kd">var</span> <span class="nx">isAlreadySelected</span> <span class="o">=</span> <span class="nx">button</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;selected-dose&quot;</span><span class="p">);</span>
-
-  <span class="c1">//if so, unselect it and remove its dosage from my total.</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">isAlreadySelected</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;selected-dose&quot;</span><span class="p">);</span>
-    <span class="nx">total</span> <span class="o">=</span> <span class="nx">total</span> <span class="o">-</span> <span class="nx">thisDose</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="c1">//if not, select it and add its dosage from my total.</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">isAlreadySelected</span> <span class="o">===</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;selected-dose&quot;</span><span class="p">);</span>
-    <span class="nx">total</span> <span class="o">=</span> <span class="nx">total</span> <span class="o">+</span> <span class="nx">thisDose</span><span class="p">;</span>
-  <span class="p">}</span>
-
-
-
-<span class="p">});</span>
-
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
-<h3>Writing stuff on a page</h3>
-
-<p>It&rsquo;s cool to see stuff show up on the page based on code you wrote. Here, an empty div with the class <code>current-total-dose-display</code> gets filled with the word &ldquo;Moo&rdquo;:</p>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;current-total-dose-display&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
-  <span class="c1">//you can probably adopt this to your app easily.</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.current-total-dose-display&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;Moo&quot;</span><span class="p">);</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div>
-<h3>Putting it all together</h3>
-
-<p>Here&rsquo;s a <a href="demo.html">basic demo</a> of all these concepts.</p>
+<p>Make the pivot table to answer Jacqui&rsquo;s question. Then, gather Bro and community ratings for the top-rated beers, and [do something] with this information.</p>
 
 </div>
 

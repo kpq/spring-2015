@@ -11,7 +11,7 @@ Questions?
 
 ##Ruby
 
-Do you have it? Check by typing "ruby" at your terminal. If you get something like "command not found", [download Ruby](https://www.ruby-lang.org/en/downloads/).
+What is it? Do you have it? Check by typing "ruby" at your terminal. If you get something like "command not found", [download Ruby](https://www.ruby-lang.org/en/downloads/).
 
 We also need a library called [watir](http://watir.com/).
 If you're lucky, typing "gem install watir" at your terminal will get you it.
@@ -50,126 +50,57 @@ browser.close
 
 ```
 
-The `this` is frankly a little abstract.
 
-###Doing math on strings
-Data types are always annoying – numbers and words and dates are different to your browser, and we need to knwo what we're working with. In your console, type
+###What about something you might really want to do?
+WNYC collects NYC school attendance data every day. Having it lets them [respond to news](http://www.wnyc.org/story/school-was-open-most-parents-kept-students-home/), and also feeds some enterprise. 
+
+```javascript
+
+require 'watir' 
+
+browser = Watir::Browser.new :chrome
+
+browser.goto 'http://schools.nyc.gov/AboutUs/schools/data/Attendance.htm'
+
+puts browser.span(:id => 'doecontrol_middlecentercontainer_a_attendance_lblPcnt').text
+
+puts browser.link(:text => 'Microsoft Excel').click
+
+```
+
+###What about something one of you really does want to do?
+Part of Jacqui's project requires knowing where the top-rated beers on BeerAdvocate.com are made. 
 
 ```javascript
 
-  var a = "3000";
+require 'watir' 
 
-  var b = 3000;
+browser = Watir::Browser.new :chrome
+browser.goto 'http://www.beeradvocate.com/lists/top/'
 
-  console.log(a+b);
+table = browser.table(:index => 1)
+links = table.links()
+urls = links.map(&:href)
+stop = urls.length
 
+(0..stop).step(3) do |i|
+
+  begin
+      browser.goto urls[i]
+      sleep 1
+      name = browser.h1.text
+      place = browser.link(:href, /place/).text
+      style = browser.link(:href, /style/).text
+      puts name + "," + place + "," + style
+  rescue 
+     puts "uhoh " + urls[i]
+  end
+
+end
+
+browser.close
 ```
 
-This is a problem that has been [Googled before](https://www.google.com/search?q=javascript+turning+a+string+into+a+number&oq=javascript+turning+a+string+into+a+number&aqs=chrome..69i57j69i65l2j0l2j69i60.5205j0j7&sourceid=chrome&es_sm=119&ie=UTF-8).
-
-
-###Having and updating variables
-To have a calculator of any kind, you need to be able to keep track of a few numbers. Variables can help!
-
-```html
-
-<script type="text/javascript">
-  
-//I start with zero.
-var total = 0;
-
-$(".dose").click(function(evt) {
-
-
-  //how much is in the dose I jut clicked (number, please, not string)?
-  var thisDose = +$(this).data("dosage");
-
-  //my total is equal to the previous total plus what I just clicked
-  total = thisDose + total;
-
-});
-
-</script>
-```
-
-###Selection and de-selection
-Any button you want to click, you want to be able to un-click. That's an issue of <em>state</em> and of <em>presentation</em> – recognizing the state your button is in and displaying it to reflect that state.
-
-An easy to do this is by adding a CSS class to the div when it is selected. 
-
-```html
-
-<style type="text/css">
-    
-  /* this applies to all .dose divs*/
-  .dose {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    background-color: #f0f0f0;
-  }
-
-  /* this applies to divs classed dose AND selected-dose */
-  .dose.selected-dose {
-    background-color: red;
-  }
-
-</style>
-
-
-```
-
-
-###Detecting classes
-Of course, you need to know whether something is selected when you're doing math – are you adding to the total or subtracting from it? Here's what Googling "Detecting classes in jQuery" [got me](https://www.google.com/search?q=detecting+classes+in+jquery&oq=detecting+classes+in+jquery&aqs=chrome..69i57.3390j0j7&sourceid=chrome&es_sm=119&ie=UTF-8). The `hasClass` function in particular seems helpful. Here are [the docs](https://api.jquery.com/hasclass/) for that.
-
-```javascript
-<script type="text/javascript">
-  
-//I start with zero.
-var total = 0;
-
-$(".dose").click(function(evt) {
-
-  var button = $(this);
-
-  //how much is in the dose I jut clicked (number, please, not string)?
-  var thisDose = +button.data("dosage");
-
-  // is this already selected?
-  var isAlreadySelected = button.hasClass("selected-dose");
-
-  //if so, unselect it and remove its dosage from my total.
-  if (isAlreadySelected === true) {
-    this.removeClass("selected-dose");
-    total = total - thisDose;
-  }
-
-  //if not, select it and add its dosage from my total.
-  if (isAlreadySelected === false) {
-    this.addClass("selected-dose");
-    total = total + thisDose;
-  }
-
-
-
-});
-
-</script>
-```
-
-###Writing stuff on a page
-It's cool to see stuff show up on the page based on code you wrote. Here, an empty div with the class `current-total-dose-display` gets filled with the word "Moo":
-
-```html
-<div class="current-total-dose-display"></div>
-
-<script type="text/javascript">
-  //you can probably adopt this to your app easily.
-  $(".current-total-dose-display").text("Moo");
-</script>
-```
-
-###Putting it all together
-Here's a [basic demo](demo.html) of all these concepts.
+###Time permitting
+Make the pivot table to answer Jacqui's question. Then, gather Bro and community ratings for the top-rated beers, and [do something] with this information.
 
