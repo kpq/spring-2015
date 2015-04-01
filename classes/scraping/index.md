@@ -9,9 +9,11 @@ title: Scraping Makes You Feel Like a Small God
 ##Housekeeping
 Questions?
 
-##Ruby
+##Scraping
+What does it mean to think like a computer? What are alternatives to scraping?
 
-What is it? Do you have it? Check by typing "ruby" at your terminal. If you get something like "command not found", [download Ruby](https://www.ruby-lang.org/en/downloads/).
+##Ruby
+What is it? Do you have it? Check by typing "ruby" at your terminal. If you get something like "command not found", [download Ruby](https://www.ruby-lang.org/en/documentation/installation/#homebrew). [Windows friends](http://rubyinstaller.org/)
 
 We also need a library called [watir](http://watir.com/).
 If you're lucky, typing "gem install watir" at your terminal will get you it.
@@ -19,7 +21,10 @@ If you're lucky, typing "gem install watir" at your terminal will get you it.
 
 ##Watir
 
-Let's follow [the example](http://watir.com/examples/).
+Watir is at its best when web pages are really complicated to scrape. But it works well for easier stuff too. Let's follow [their intro example](http://watir.com/examples/).
+
+We can use ruby interactively (a line at a time) with the command 'irb'. Or you can run an entire script at once with ruby whatever.rb (where whatever.rb contains commands like the ones below.)
+
 
 ```javascript
   
@@ -51,7 +56,7 @@ browser.close
 ```
 
 
-###What about something you might really want to do?
+###Let's try something you might really want to do.
 WNYC collects NYC school attendance data every day. Having it lets them [respond to news](http://www.wnyc.org/story/school-was-open-most-parents-kept-students-home/), and also feeds some enterprise. 
 
 ```javascript
@@ -129,7 +134,7 @@ browser.close
 ```
 
 ###Use our new knowledge.
-Answer Jacqui's question (you will probably use your excel skills). 
+Answer Jacqui's question (you will probably need your excel skills). A hint: "Inc." is not a state.
 
 ###Time permitting
 Gather Bro and community ratings for the top-rated beers, and come up with a lede based on this information.
