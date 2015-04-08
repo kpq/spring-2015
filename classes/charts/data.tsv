@@ -1,0 +1,58 @@
+food	display	type	val
+applejuice	Apple juice	drink	4.23
+beer	Beer	drink	1.96
+grapefruitjuice	Grapefruit juice	drink	2.27
+grapejuice	Grape juice	drink	2.78
+milk	Milk	drink	5.48
+orangejuice	Orange juice	drink	4.11
+pineapplejuice	Pineapple juice	drink	6.36
+soymilk	Soy milk	drink	20.53
+sparklingwine	Sparkling wine	drink	4.28
+wine	Wine	drink	3.48
+apples	Apples	fruveg	3.34
+artichokes	Artichokes	fruveg	5.92
+asparagus	Asparagus	fruveg	20.32
+avocados	Avocados	fruveg	9.05
+bananas	Bananas	fruveg	5.71
+blackberries	Blackberries	fruveg	4.22
+blueberries	Blueberries	fruveg	5.64
+broccoli	Broccoli	fruveg	2.44
+brusselssprouts	Brussels sprouts	fruveg	2.44
+cabbage	Cabbage	fruveg	2.26
+carrots	Carrots	fruveg	0.93
+cauliflower	Cauliflower	fruveg	2.44
+cherries	Cherries	fruveg	12.22
+cranberries	Cranberries	fruveg	2.12
+cucumber	Cucumber	fruveg	3.17
+eggplant	Eggplant	fruveg	1.69
+grapefruit	Grapefruit	fruveg	3.74
+grapes	Grapes	fruveg	3.12
+kale	Kale	fruveg	2.26
+lettuce	Lettuce	fruveg	0.85
+mangoes	Mangoes	fruveg	28.5
+okra	Okra	fruveg	7.76
+onions	Onions	fruveg	1.19
+oranges	Oranges	fruveg	2.48
+peaches	Peaches	fruveg	4.69
+pear	Pear	fruveg	2.7
+pineapples	Pineapples	fruveg	1.4
+raspberries	Raspberries	fruveg	4.22
+spinach	Spinach	fruveg	1.39
+squash	Squash	fruveg	1.92
+strawberries	Strawberries	fruveg	1.24
+tomatoes	Tomatoes	fruveg	0.95
+watermelon	Watermelon	fruveg	1.79
+beef	Beef	protein	106.28
+chicken	Chicken	protein	16.61
+chickpeas	Chickpeas	protein	76.07
+eggs	Eggs	protein	11.73
+goat	Goat	protein	41.35
+lamb	Lamb	protein	84.68
+lentils	Lentils	protein	71.28
+peas	Peas	protein	44.53
+pork	Pork	protein	41.25
+soyburger	Soy burger	protein	21.84
+pasta	Pasta	starch	16.6
+potatoes	Potatoes	starch	2.98
+rice	Rice	starch	16.26
+wheatbread	Wheat bread	starch	14.44

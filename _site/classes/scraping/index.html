@@ -49,7 +49,7 @@ If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal w
 <p>Watir is at its best when web pages are really complicated to scrape. But it works well for easier stuff too. Let&rsquo;s follow <a href="http://watir.com/examples/">their intro example</a>.</p>
 
 <p>We can use ruby interactively (a line at a time) with the command &lsquo;irb&rsquo;. Or you can run an entire script at once with ruby whatever.rb (where whatever.rb contains commands like the ones below.)</p>
-<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
 
 <span class="nx">browser</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
 <span class="nx">browser</span><span class="p">.</span><span class="kr">goto</span> <span class="s1">&#39;http://bit.ly/watir-example&#39;</span>
@@ -79,7 +79,7 @@ If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal w
 <p>We&rsquo;ve used watir to scrape <a href="http://outage.cl-p.com/outage/outagemap.aspx">power outage maps</a>, <a href="http://calc.taxpolicycenter.org/marriagepenaltycalculator/">fill out this form</a> 100,000 times, get <a href="https://donate.aamaadmiparty.org/Report/Donation_List.aspx">lists of donors</a> in Indian elections and <a href="http://artso.artron.net/auction/search_auction.php?keyword=&amp;showtype=1&amp;auctiontype=020200000000&amp;orgnum=3&amp;orgid=JG0102&amp;listtype=&amp;orgenname_16=&amp;artist=&amp;startprice=&amp;endprice=&amp;starttime=2003-01-01&amp;endtime=2003-12-31">grab thousands of art auction results in China</a></p>
 
 <p>WNYC collects NYC school attendance data every day. Having it lets them <a href="http://www.wnyc.org/story/school-was-open-most-parents-kept-students-home/">respond to news</a>, and also feeds some enterprise. </p>
-<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
 
 <span class="nx">browser</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
 
@@ -92,7 +92,7 @@ If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal w
 <h3>Could watir have helped us a couple of weeks ago?</h3>
 
 <p>Maybe, but this is probably overkill.</p>
-<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">http</span><span class="o">:</span><span class="c1">//stackoverflow.com/questions/1259009/watir-image-processing</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">http</span><span class="o">:</span><span class="c1">//stackoverflow.com/questions/1259009/watir-image-processing</span>
 <span class="nx">require</span> <span class="s1">&#39;watir-webdriver&#39;</span>
 <span class="nx">require</span> <span class="s1">&#39;open-uri&#39;</span>
 <span class="nx">b</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
@@ -116,7 +116,7 @@ If you&rsquo;re lucky, typing &ldquo;gem install watir&rdquo; at your terminal w
 <h3>What about something one of you really does want to do?</h3>
 
 <p>Part of Jacqui&rsquo;s project requires knowing where the top-rated beers on <a href="http://www.beeradvocate.com/lists/top/">BeerAdvocate.com</a> are made. </p>
-<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">require</span> <span class="s1">&#39;watir&#39;</span> 
 
 <span class="nx">browser</span> <span class="o">=</span> <span class="nx">Watir</span><span class="o">::</span><span class="nx">Browser</span><span class="p">.</span><span class="k">new</span> <span class="o">:</span><span class="nx">chrome</span>
 <span class="nx">browser</span><span class="p">.</span><span class="kr">goto</span> <span class="s1">&#39;http://www.beeradvocate.com/lists/top/&#39;</span>
